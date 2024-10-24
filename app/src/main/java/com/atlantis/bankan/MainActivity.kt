@@ -1,5 +1,6 @@
 package com.atlantis.bankan
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -42,7 +43,37 @@ class MainActivity : AppCompatActivity() {
 
                 R.id.nav_profile -> {
                     Toast.makeText(this, "Profile clicked", Toast.LENGTH_SHORT).show()
+
+
+                    // Yeni Activity'yi başlatmak
+                    val intent = Intent(this, ProfileActivity::class.java)
+                    startActivity(intent)
                 }
+                R.id.nav_settings -> {
+                    Toast.makeText(this, "Settings clicked", Toast.LENGTH_SHORT).show()
+
+                    val intent = Intent(this, SettingsActivity::class.java)
+                    startActivity(intent)
+                }
+                R.id.nav_share -> {
+                    Toast.makeText(this, "Share clicked", Toast.LENGTH_SHORT).show()
+
+                    val intent = Intent(this, ShareActivity::class.java)
+                    startActivity(intent)
+                }
+                R.id.nav_about -> {
+                    Toast.makeText(this, "About Us clicked", Toast.LENGTH_SHORT).show()
+
+                    val intent = Intent(this, InfoActivity::class.java)
+                    startActivity(intent)
+                }
+
+
+
+
+
+
+
             }
             drawerLayout.closeDrawer(GravityCompat.START) // Menü tıklanınca otomatik kapanır
             true
